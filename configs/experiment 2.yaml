@@ -1,0 +1,85 @@
+memo: defalut
+total_epoches: 1000 #number of training epochs
+epoch_size: 1 #number of update iterations in an epoch = How many processes to run
+use_multiprocessing: False #use multiprocessing to parallelize the process
+n_processes: 8 #number of processes to use for training
+use_offline_wandb: False # Log results to wandb
+#grad_norm_clip: 10 # Reduce magnitude of gradients above this L2 norm
+use_cuda: False # Use GPU
+
+normalize_rewards: True
+normalize_advantages: False
+
+gamma: 0.9
+lr: 0.001 #learning rate
+value_coeff: 0.01 #coeff for value loss term in the loss function
+vib_coeff: 0.01 #coeff for vae loss term in the loss function
+modularity_coeff: 10 #coeff for modularity loss term in the loss function
+batch_size: 500
+interval: 1  # How often to change the graph
+
+
+treshold: 0.5 #threshold for the tie comm model
+
+
+
+
+#baselines
+
+
+
+
+
+add_value_last_step: True
+recurrent: True #make the model recurrent in time
+
+
+# ---CommNet specific args---
+#commnet: False #enable commnet model
+#ic3net: False #enable ic3net model
+#tarcomm: False #enable tarmac model (with commnet or ic3net)
+#gacomm: False #enable gacomm model
+#magic: False
+#nagents: 1 #Number of agents (used in multiagent)
+#commnet: True #enable commnet model
+#ic3net: True #enable ic3net model
+#mean_ratio: 0 #how much coooperative to do? 1.0 means fully cooperative
+#hard_attn: True #Whether to use hard attention: action - talk|silent
+#comm_action_one: True #Whether to always talk, sanity check for hard attention.
+##mean_ratio: 1.0 #how much coooperative to do? 1.0 means fully cooperative
+##hard_attn: False #Whether to use hard attention: action - talk|silent
+##comm_action_one: False
+#hid_size: 128
+#comm_mode: 'avg' #Type of mode for communication tensor calculation [avg|sum]
+#comm_passes: 1 #Number of comm passes per step over the model
+#comm_mask_zero: False #Whether communication should be there
+#
+#rnn_type: 'LSTM' #type of rnn to use. [LSTM|MLP]
+#detach_gap: 10 #detach hidden state and cell state for rnns at this interval.' + ' Default 10000 (very high)
+#comm_init: 'uniform' #how to initialise comm weights [uniform|zeros]
+#
+#advantages_per_action: False #Whether to multipy log porb for each chosen action with advantages
+#share_weights: False #Share weights for hops
+##
+###lamda:
+#directed: True #whether the communication graph is directed
+#self_loop_type1: 1 #self loop type in the first gat layer (0: no self loop, 1: with self loop, 2: decided by hard attn mechanism)
+#self_loop_type2: 1 #self loop type in the second gat layer (0: no self loop, 1: with self loop, 2: decided by hard attn mechanism)
+#gat_num_heads: 4 #number of heads in gat layers except the last one
+#gat_num_heads_out: 1 #number of heads in output gat layer
+#gat_hid_size: 32 #hidden size of one head in gat
+#ge_num_heads: 4 #number of heads in the gat encoder
+#first_gat_normalize: False #whether normalize the coefficients in the first gat layer of the message processor
+#second_gat_normalize: False #whether normilize the coefficients in the second gat layer of the message proccessor
+#gat_encoder_normalize: False #whether normilize the coefficients in the gat encoder (they have been normalized if the input graph is complete
+#use_gat_encoder: False #whether use the gat encoder before learning the first graph
+#gat_encoder_out_size: 64 #hidden size of output of the gat encoder
+#first_graph_complete: True #whether the first communication graph is set to a complete graph
+#second_graph_complete: True #whether the second communication graph is set to a complete graph
+#learn_second_graph: False #whether learn a new communication graph at the second round of communication
+#message_encoder: False #whether use the message encoder
+#message_decoder: True #whether use the message decoder
+
+
+
+

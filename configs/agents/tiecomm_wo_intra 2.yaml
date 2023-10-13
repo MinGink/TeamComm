@@ -1,0 +1,18 @@
+name: "tiecomm_wo_intra"
+hid_size: 32
+block: 'intra'
+time_interval: 1
+threshold: 0.5
+
+
+
+
+
+
+
+
+
+
+
+
+
