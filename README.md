@@ -23,4 +23,6 @@ Effective communication is pivotal for the success of Multi-Agent Systems (MAS) 
 ```bash
 git clone https://github.com/your-github-username/teamcomm.git
 cd teamcomm
+conda create -n teamcomm python==3.8
+conda activate teamcomm
 python install.py
