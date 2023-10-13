@@ -26,3 +26,28 @@ cd teamcomm
 conda create -n teamcomm python==3.8
 conda activate teamcomm
 python install.py
+
+## Usage Instructions
+
+### Running the Training Process
+
+Execute the following command to initiate the training process:
+
+```bash
+python main.py --env your_environment --map your_env_map  --agent teamcomm
+
+### Parameter Descriptions
+
+Below are some of the available command-line arguments along with their descriptions:
+
+- `--use_cuda`: Set to `True` to enable CUDA (if available).
+- `--env`: Specifies the name of the environment to use.
+- `--map`: Specifies the name of the environment map to use.
+- `--agent`: Specifies the name of the algorithm to use.
+- `--seed`: Set the random seed to ensure the reproducibility of the experiment.
+- `--use_offline_wandb`: Set to `True` to enable offline wandb experiment logging.
+- `--use_multiprocessing`: Set to `True` to enable multi-process training.
+- `--total_epoches`: Set the total number of training epochs.
+- `--n_processes`: Set the number of concurrent processes.
+- `--att_head`: Set the number of attention heads (applicable to certain algorithms only).
+- `--hid_size`: Set the size of the hidden layer (applicable to certain algorithms only).
