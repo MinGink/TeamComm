@@ -26,6 +26,8 @@ cd teamcomm
 conda create -n teamcomm python==3.8
 conda activate teamcomm
 python install.py
+```
+
 
 ## Usage Instructions
 
@@ -35,6 +37,7 @@ Execute the following command to initiate the training process:
 
 ```bash
 python main.py --env your_environment --map your_env_map  --agent teamcomm
+```
 
 ### Parameter Descriptions
 
