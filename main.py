@@ -257,11 +257,11 @@ if __name__ == '__main__':
     parser.add_argument('--use_offline_wandb', action='store_true', help='use offline wandb')
     parser.add_argument('--use_multiprocessing', action='store_true', help='use multiprocessing')
     parser.add_argument('--batch_size', type=int, default=100, help='batch size')
-    parser.add_argument('--total_epoches', type=int, default=100, help='total number of training epochs')
+    parser.add_argument('--total_epoches', type=int, default=1000, help='total number of training epochs')
     parser.add_argument('--n_processes', type=int, default=6, help='number of processes')
     parser.add_argument('--att_head', type=int, default=1, help='number of attention heads')
     parser.add_argument('--hid_size', type=int, default=64, help='hidden size')
-    parser.add_argument('--note', type=str, default="tj", help='note')
+    parser.add_argument('--note', type=str, default="ap", help='note')
 
     args = parser.parse_args()
 
