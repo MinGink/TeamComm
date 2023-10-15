@@ -235,8 +235,8 @@ if __name__ == '__main__':
     parser.add_argument('--groups', type=int, nargs='+', default=[3, 3], help='just for ac_att_noise')
     parser.add_argument('--env', type=str, default='mpe', help='environment name',
                         choices=['mpe','lbf','rware','tj'])
-    parser.add_argument('--map', type=str, default="mpe-large-spread-v1", help='environment map name',
-                        choices=['easy','medium','hard','mpe-large-spread-v2','mpe-large-spread-v1','mpe-simple-tag-v1','Foraging-easy-v0','Foraging-medium-v0','Foraging-hard-v0'])
+    parser.add_argument('--map', type=str, default="mpe-large-spread-v3", help='environment map name',
+                        choices=['easy','medium','hard','mpe-large-spread-v2','mpe-large-spread-v3','mpe-simple-tag-v1','Foraging-easy-v0','Foraging-medium-v0','Foraging-hard-v0'])
     parser.add_argument('--time_limit', type=int, default=50, help='time limit')
 
 
